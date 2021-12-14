@@ -29,15 +29,9 @@ def convert(_path):
 
 
 def count(_data):
-    keys = _data.keys()
-
-    symbols = []
-    for key in keys:
-        symbols.append(key[0])
-
     occurences = {}
 
-    for key in keys:
+    for key in _data.keys():
         if key[0] in occurences:
             occurences[key[0]] += _data[key]
         else:
